@@ -33,11 +33,14 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       
-      # Ajout de l’action thollander/actions-comment-pull-request
-      - name: Comment Pull Request
+      - name: PR Comment
         uses: thollander/actions-comment-pull-request@v3.0.1
         with:
+          # GITHUB_TOKEN secret
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          message: "Bonjour PRENOM NOM"
+          # Message to comment
+          message: |
+            Bonjour ${{ vars.NAME }} ${{ vars.NOM }}
+
 
 
