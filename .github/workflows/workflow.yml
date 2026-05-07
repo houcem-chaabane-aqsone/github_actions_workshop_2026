@@ -37,7 +37,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Message to comment
           message: |
-            Bonjour ${{ vars.NAME }} ${{ secrets.NOM }}
+            Bonjour ${{ vars.PRENOM }} ${{ secrets.NOM }}
 
 
 
